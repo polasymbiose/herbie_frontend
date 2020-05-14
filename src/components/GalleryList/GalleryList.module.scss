@@ -1,0 +1,13 @@
+@import "../../style/_variables.scss";
+
+.GalleryList {
+  background-color: $white;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+

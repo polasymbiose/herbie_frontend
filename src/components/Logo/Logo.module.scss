@@ -1,0 +1,50 @@
+@import "../../style/_variables.scss";
+
+.Logos {
+  pointer-events: all;
+  opacity: 1;
+  transition: opacity $short ease-out;
+
+  &:hover {
+    opacity: $op;
+  }
+
+  &.openMenu {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .logo {
+    position: relative;
+  }
+
+  .logoLoopWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  a  {
+    text-decoration: none;
+    display: block;
+    padding: $padXXS;
+    background-color: $primary;
+    border: 1px solid white;
+
+    @media (min-width: 600px) {
+      padding: $padXXS;
+      margin: $padXS;
+    }
+  }
+
+  img {
+    width: 40px;
+    display: block;
+
+    @media (min-width: 600px) {
+      width: 50px;
+    }
+  }
+}
+
+

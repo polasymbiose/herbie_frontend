@@ -1,0 +1,20 @@
+@import '../../style/_variables.scss';
+
+.AngeboteFilter {
+  // background-color: $background;
+  // padding-bottom: $padXL;
+
+  .filterList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -$padXL;
+  }
+
+  .filterItem {
+    display: flex;
+    margin-right: $padXS;
+    margin-bottom: $padXS;
+  }
+}

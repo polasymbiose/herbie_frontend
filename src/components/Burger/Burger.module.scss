@@ -1,0 +1,10 @@
+@import "../../style/_variables.scss";
+
+.Burger {
+  opacity: 1;
+  transition: opacity $short ease-in;
+
+  &:hover {
+    opacity: $op;
+  }
+}

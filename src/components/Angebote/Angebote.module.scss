@@ -1,0 +1,72 @@
+@import '../../style/_variables.scss';
+
+.Angebote {
+  background-color: $white;
+  transition: all 400ms;
+
+  h3 {
+    @include angeboteHeadline;
+  }
+
+  .copy,
+  .footnote {
+    margin-top: $padXS;
+
+    p {
+      @include footnote;
+    }
+  }
+
+  .category {
+    margin-top: $padS;
+    transition: all 300mx ease-in-out;
+
+    h4 {
+      @include angeboteItemSemi;
+    }
+
+    .tableHead {
+      margin-bottom: $padXXS;
+      margin-top: $padXS;
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+    }
+  }
+
+  .border {
+    border-top: 1px solid $blackLightest;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    padding: $padXS 0;
+
+    .info {
+      flex: 3;
+      min-width: 0;
+      align-self: center;
+      padding-right: $padXXS;
+
+      p {
+        @include angeboteItemRegular;
+        word-wrap: break-word;
+      }
+
+      h4 {
+        word-wrap: break-word;
+      }
+    }
+
+    .price {
+      flex: 1;
+      align-self: center;
+
+      h6 {
+        @include angeboteItemRegular;
+      }
+    }
+  }
+}

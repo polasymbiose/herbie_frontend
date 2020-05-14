@@ -1,0 +1,78 @@
+@import "./style/variables";
+
+/* 'Baloo 2'-500 - latin */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
+
+html {
+  font-size: 100%;
+  background-color: $secondary;
+}
+
+body {
+  font-family: -apple-system, 'Baloo 2', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $secondary;
+
+  &.noscroll {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+
+label {
+  @include text;
+}
+
+p {
+   margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  word-wrap: break-word;
+  font-family: 'Baloo 2';
+  // hyphens: auto;
+}
+
+.dialog-enter {
+  opacity: 0;
+  background-color: $primary;
+  transition: opacity 400ms;
+}
+
+.dialog-enter-done {
+  position: relative;
+  opacity: 1;
+  background-color: $white;
+}
+
+.dialog-enter-active {
+  top: -80px;
+  left: 0;
+  opacity: 1;
+  background-color: $white;
+}
+
+.dialog-exit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  background-color: $white;
+  transition: all 100ms;
+}
+
+.dialog-exit-active {
+  opacity: 0.01;
+}
+
+.dialog-exit-active {
+  opacity: 0;
+}

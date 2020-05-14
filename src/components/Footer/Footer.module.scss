@@ -1,0 +1,90 @@
+@import '../../style/_variables.scss';
+
+.Footer {
+  background-color: #A79A87;
+  background-size: cover;
+  color: $white;
+  padding-top: $padS;
+  position: relative;
+  z-index: 2;
+
+  h5,
+  h1 {
+    text-transform: uppercase;
+    @include footerheadline;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: $padXXS 0 0 0;
+    padding: 0;
+
+    li {
+      @include text;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    @include footerheadline;
+    opacity: 1;
+    transition: opacity 120ms ease-in;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .footerend {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid $white;
+    padding-top: $padXXS;
+    padding-bottom: $padS;
+    margin-top: $padXS;
+
+    justify-content: space-between;
+    flex-direction: row;
+
+    > div {
+      display: flex;
+      flex-direction: row;
+
+      > div {
+        display: flex;
+      }
+    }
+
+    .social {
+      display: flex;
+      flex: 8;
+
+      svg {
+        margin-right: $padXXS;
+      }
+    }
+
+    .right {
+      flex-direction: row;
+      flex: 4;
+
+      > div {
+        margin-right: $padXS;
+
+        a {
+          font-size: 0, 875rem;
+        }
+      }
+
+      @media (min-width: 600px) {
+        padding-left: $padS;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../style/_variables.scss';
+
+.Socials {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  @media (min-width: 600px) {
+    width: 64px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      
+      &:last-of-type {
+        margin-top: $padXXS;
+      }
+    }
+  }
+}

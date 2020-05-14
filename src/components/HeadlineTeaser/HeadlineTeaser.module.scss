@@ -1,0 +1,37 @@
+@import "../../style/_variables.scss";
+
+.HeadlineTeaser {
+  color: $black;
+  padding: $padXL 0 $padXXL 0;
+  background-color: $white;
+
+  &.paddingBottomS {
+    padding: $padXL 0 $padXL 0;
+  }
+
+  &.backgroundColor {
+    background-color: $background;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: $semi;
+    font-size: 32px;
+    letter-spacing: 1.6px;
+    color: $black;
+    margin-bottom: $padS;
+  }
+
+  p {
+    @include text;
+    color: $black;
+    word-break: break-word;
+    // white-space: pre-wrap;
+
+    a {
+      @include href;
+    }
+  }
+}
+

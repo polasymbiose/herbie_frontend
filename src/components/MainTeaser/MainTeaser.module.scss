@@ -1,0 +1,80 @@
+@import "../../style/_variables.scss";
+
+.MainTeaser {
+  background-color: $secondary;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .textWrapper {
+    width: 100%;
+    opacity: 0;
+    filter: blur(4px);
+    margin-bottom: $padL;
+
+    &.ismounted {
+      transition: all 1000ms ease-out;
+      transition-property: opacity, filter; 
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+    color: $black;
+    margin: 0;
+    margin: 0 8.33%;
+  }
+
+  h1 {
+    @include mainteaserheadline;
+  }
+
+  h2 {
+    @include mainteasersubheadline
+  }
+
+  > div {
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .floral {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: blur(4px);
+
+    &.loaded {
+      transition: all 1000ms ease-out;
+      transition-property: opacity, filter; 
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+}
+

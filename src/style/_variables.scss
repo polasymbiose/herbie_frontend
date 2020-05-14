@@ -1,0 +1,147 @@
+// COLORS
+$black: #212121;
+$blackBright: rgb(40,40,40);
+$blackLight: rgba(34,34,34,0.7);
+$blackLightest: rgba(34,34,34,0.3);
+$white: #F7F5F4;
+// $white: #ffffff;
+$whiteLight: rgba(221,221,221, 0.7);
+$whiteLightest: rgba(221,221,221, 0.1);
+
+$navListItem: #BDB9B7;
+// $primary: #011F16;
+$two: #282c34;
+$success: #2E8B57;
+$background: #EFEBE9;
+$primary: #AA9FC1;
+$secondary: #A79A87;
+
+$border: 2px;
+
+// FONT WEIGHT
+$reg: 400;
+$med: 500;
+$semi: 500;
+
+// PADDINGS
+$padXXS: 8px;
+$padXS: 16px;
+$padS: 32px;
+$padM: 56px;
+$padL: 64px;
+$padXL: 80px;
+$padXXL: 136px;
+
+$op: 0.7;
+$opXS: 0.3;
+$short: 120ms;
+
+$maxWrapperWidth: 800px;
+
+@mixin href {
+  color: black;
+}
+
+@mixin wrapper {
+  display: block;
+  max-width: $maxWrapperWidth;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@mixin mainteaserheadline {
+  font-weight: $med;
+  letter-spacing: 0.15rem;
+  font-size: 3.5rem;
+}
+
+@mixin mainteasersubheadline {
+  font-weight: $med;
+  letter-spacing: 0.1125rem;
+  font-size: 2.75rem;
+}
+
+@mixin navItem {
+  font-weight: $med;
+  letter-spacing: 0.09375rem;
+  font-size: 1.875rem;
+}
+
+@mixin angeboteHeadline {
+  font-weight: $semi;
+  letter-spacing:0.075rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+@mixin angeboteItemSemi {
+  font-weight: $semi;
+  letter-spacing: 0.05rem;
+  font-size: 1.125rem;
+}
+@mixin angeboteItemRegular {
+  font-weight: $reg;
+  letter-spacing: 0.05625rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@mixin filterbutton {
+  font-size: 0.875rem;
+  font-weight: $reg;
+  letter-spacing: 0;
+}
+
+@mixin kontaktadresshead {
+  font-size: 0.875rem;
+  font-weight: $med;
+  letter-spacing: 0.04375rem;
+  text-transform: uppercase;
+}
+
+@mixin footerheadline {
+  font-size: 0.875rem;
+  font-weight: $semi;
+  letter-spacing: 0.04375rem;
+}
+@mixin footertext {
+  font-size: 1.125rem;
+  font-weight: $med;
+  letter-spacing: 0;
+}
+
+@mixin text {
+  font-weight: $reg;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'Baloo 2';
+}
+
+@mixin footnote {
+  font-weight: $reg;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+  font-family: 'Baloo 2';
+}
+
+@mixin kontaktformular {
+  font-size: 1.5rem;
+  font-weight: $semi;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+}
+
+@mixin line {
+  &:before {
+    content: '';
+    display: inline-block;
+    width: $padXL;
+    height: 1px;
+    background-color: $black;
+    vertical-align: super;
+    margin-right: 12px;
+  }
+
+}
+

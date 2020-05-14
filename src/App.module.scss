@@ -1,0 +1,15 @@
+@import "./style/variables";
+
+.App {
+  background-color: $primary;
+}
+
+.route {
+  width: 100%;
+  filter: grayscale(0%);
+  transition: filter 1000ms ease-out;
+
+  &.blur {
+    filter: grayscale(100%);
+  }
+}

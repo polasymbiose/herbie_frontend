@@ -1,0 +1,24 @@
+@import "../../style/_variables.scss";
+
+.ImageTeaser {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: -$padL;
+  background-color: $white;
+
+  .background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  img {
+    margin-top: -$padS;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+

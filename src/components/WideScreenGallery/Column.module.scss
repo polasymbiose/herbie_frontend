@@ -1,0 +1,12 @@
+@import "../../style/variables";
+
+.column {
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    display: block;
+    margin-bottom: $padXS;
+    border-radius: $border;
+  }
+}

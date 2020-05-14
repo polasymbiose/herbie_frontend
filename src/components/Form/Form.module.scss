@@ -1,0 +1,105 @@
+@import "../../style/_variables.scss";
+
+.Form {
+  background-color: $white;
+
+  h4 {
+    @include kontaktformular;
+    color: $primary;
+    margin: $padXL 0 $padS 0;
+
+  }
+
+  h3 {
+    @include kontaktformular;
+  }
+
+  h5 {
+    @include kontaktadresshead;
+    margin-bottom: $padXXS;
+    margin-top: $padXS;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      @include angeboteItemRegular;
+    }
+  }
+
+  .toprow {
+    padding: $padXS 0;
+  }
+
+  label, input, textarea {
+    font-family: 'Baloo 2';
+  }
+
+  .checkout {
+    padding: $padS 0 0 0;
+
+    > div {
+      display: flex;
+      flex-direction: row;
+      color: $success;
+    }
+  }
+
+  &.paddingTop {
+    padding-top: 96px;
+  }
+}
+
+.checkbox {
+  margin-top: 32px;
+
+  .switch {
+    p {
+      margin-left: -3px;
+      color: $secondary
+    }
+  }
+
+  .errormsg {
+    color: #f44336;
+    font-size: 0.8571428571428571rem;
+  }
+}
+
+.formWrapper {
+  position: relative;
+
+  .successMask {
+    // position: absolute;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
+    background-color: $white;
+
+
+    p {
+      @include text;
+      margin-top: $padS;
+    }
+
+    h2 {
+      margin-top: $padXL;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .toprow  {
+    display: flex;
+    flex-direction: row;
+    // &:first-child {
+    //   padding-right: $padXXS;
+    // }
+
+    // &:last-child {
+    //   padding-left: $padXXS;
+    // }
+  }
+}

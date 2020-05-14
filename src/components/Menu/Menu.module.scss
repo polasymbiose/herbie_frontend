@@ -1,0 +1,77 @@
+@import "../../style/_variables.scss";
+
+.Menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  pointer-events: all;
+
+  &.pointerEvents {
+    pointer-events: none;
+  }
+}
+
+.clipWrapper {
+  // position: absolute;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $two;
+  margin-left: auto;
+
+  .list {
+    position: fixed;
+    height: 330px;
+    width: 330px;
+    justify-content: space-between;
+    list-style-type: none;
+
+    .listitem {
+      flex: 1;
+      padding: 0 0 $padS 0;
+
+      div {
+        display: block ;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    
+        h6 {
+          transition: all 300ms ease-in-out;
+          font-size: 2rem;
+          margin: 0;
+          padding: 0;
+          color: $navListItem;
+          @include navItem;
+          cursor: pointer;
+    
+          &.active {
+            color: $white;
+          }
+        }
+
+        .indicator {
+          position: absolute;
+          transform: translate(-100%, -50%);
+          top: 50%;
+          left: -20px;
+          height: 2px;
+        }
+      
+        .activeIndicator {
+          height: 2px;
+        }
+      }
+    }
+  }
+}

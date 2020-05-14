@@ -1,0 +1,28 @@
+@import '../../style/variables';
+
+.wsgallery {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin-top: -$padL;
+
+  .columnWrapper {
+    flex-direction: column;
+    flex: 1;
+    padding: 0 $padXXS;
+
+    &:first-of-type {
+      @media (min-width: 600px) {
+        padding-left: 0;
+        padding-right: $padXXS;
+      }
+    }
+
+    &:last-child {
+      @media (min-width: 600px) {
+        padding-left: $padXXS;
+        padding-right: 0;
+      }
+    }
+  }
+}

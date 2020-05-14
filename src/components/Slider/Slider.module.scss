@@ -1,0 +1,110 @@
+@import '../../style/_variables.scss';
+
+.Slider {
+  // width: 100%;
+  // height: 400px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 500ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .curtain {
+    height: 100%;
+    overflow: hidden;
+    // padding: $padS;
+
+    .image {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%;
+    }
+  }
+}
+
+.AltSlider {
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+
+  > div {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    will-change: transform;
+    padding: $padXXS;
+    box-sizing: border-box;
+
+    &.arrows {
+      left: 0;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      pointer-events: none;
+
+      > div {
+        width: 50px;
+        height: 100%;
+        cursor: pointer;
+        pointer-events: all;
+        position: relative;
+        transition: all 400ms ease-in;
+
+        svg {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+
+        // &:hover {
+        //   width: 200px;
+        // }
+      }
+    }
+  }
+
+  div > .background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    // box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5), 0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+@media (min-width: 600px) {
+  .AltSlider {
+    > div {
+      padding: $padL;
+    }
+  }
+}
