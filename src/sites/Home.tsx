@@ -10,7 +10,6 @@ const Form = dynamic(import('../components/Form/Form'))
 const MainTeaser = dynamic(import('../components/MainTeaser/MainTeaser'), {
   ssr: false,
 })
-const Angebote = dynamic(import('../components/Angebote/Angebote'))
 const BoxTeaser = dynamic(import('../components/BoxTeaser/BoxTeaser'))
 const HeadlineTeaser = dynamic(
   import('../components/HeadlineTeaser/HeadlineTeaser')
@@ -23,7 +22,7 @@ const GalleryList = dynamic(import('../components/GalleryList/GalleryList'), {
 })
 const Slider = dynamic(import('../components/Slider/Slider'), { ssr: false })
 
-const Home = ({ alldata, priceCat }: { alldata: any[]; priceCat: any }) => {
+const Home = ({ alldata }: { alldata: any[]; priceCat: any }) => {
   const router = useRouter()
   const galleryIndex = useObservable(rx_isGalleryOpen)
   useBodyClass('noscroll', galleryIndex !== -1)
@@ -34,18 +33,6 @@ const Home = ({ alldata, priceCat }: { alldata: any[]; priceCat: any }) => {
     () =>
       alldata?.find((d: any) => {
         return d.navigationConfig.path.includes(router.pathname)
-      }) ||
-      alldata?.find((d: any) => {
-        return (
-          d.navigationConfig.path.includes('/galerie') &&
-          router.pathname.includes('/galerie')
-        )
-      }) ||
-      alldata?.find((d: any) => {
-        return (
-          d.navigationConfig.path.includes('/preise') &&
-          router.pathname.includes('/preise')
-        )
       }) ||
       alldata?.find((d: any) => {
         return d.navigationConfig.path.includes(router.query.route)
@@ -106,14 +93,6 @@ const Home = ({ alldata, priceCat }: { alldata: any[]; priceCat: any }) => {
               index={index}
               data={teaser}
               key={`teaserlist-${teaser.__component}${teaser.id}`}
-            />
-          )
-        } else if (teaser.__component === 'base-components.angebote' && !isHidden) {
-          return (
-            <Angebote
-              index={index}
-              key={`teaserlist-${teaser.__component}${teaser.id}`}
-              data={priceCat}
             />
           )
         } else {

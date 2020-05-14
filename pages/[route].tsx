@@ -17,7 +17,6 @@ export async function getStaticPaths() {
   // console.log('sites', sites)
   return {
     paths: [
-      '/leistungen',
       '/impressionen',
       '/datenschutz',
       '/kontakt',
