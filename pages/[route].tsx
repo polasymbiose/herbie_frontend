@@ -19,8 +19,7 @@ export async function getStaticPaths() {
     paths: [
       '/impressionen',
       '/datenschutz',
-      '/kontakt',
-      '/impressum',
+      '/shop'
     ],
     fallback: false,
   }
