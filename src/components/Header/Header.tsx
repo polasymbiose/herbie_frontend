@@ -1,15 +1,12 @@
-import cn from 'classnames';
+// import cn from 'classnames';
 import dynamic from "next/dynamic";
 import React from 'react';
 import s from './Header.module.scss';
 const Logos = dynamic(import('../Logo/Logo'));
-const Burger = dynamic(import('../Burger/Burger'));
-const cx = cn.bind(s)
-
+// const Burger = dynamic(import('../Burger/Burger'));
+// const cx = cn.bind(s)
 const Header = ({
   isOpen,
-  setIsOpen,
-  hide
 }: {
   isOpen: boolean
   hide: boolean
