@@ -19,9 +19,9 @@ app.prepare()
     return handle(req, res)
   })
 
-  server.listen(22000, (err) => {
+  server.listen(41160, (err) => {
     if (err) throw err
-    console.log('> Ready on http://localhost:22000')
+    console.log('> Ready on http://localhost:41160')
   })
 })
 .catch((ex) => {
@@ -30,7 +30,7 @@ app.prepare()
 })
 
 
-// const port = parseInt(process.env.PORT, 10) || 22000
+// const port = parseInt(process.env.PORT, 10) || 41160
 // const dev = process.env.NODE_ENV !== 'production'
 // const app = next({ dev })
 // const handle = app.getRequestHandler()
