@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 const devHost = 'http://localhost:1337'
-// const devHost = 'https://cms.makeoverbymey.com'
+// const devHost = 'https://cms.herbie.com'
 // const devHost = 'http://localhost:1337'
 const prodHost = 'http://localhost:1337'
 
@@ -33,7 +33,7 @@ export const postReqeuest = async (data: Formular): Promise<void> => {
 
   const raw = JSON.stringify({
     ...data,
-    to: 'info@makeoverbymey.com'
+    to: 'info@herbie-unverpackt.de'
   })
 
   const options = {
@@ -54,7 +54,7 @@ export const postReqeuest = async (data: Formular): Promise<void> => {
 export const formCreator = (params: {[key: string]: string}): Formular => {
 
   return ({
-    to: 'info@makeoverbymey.com',
+    to: 'info@herbie.com',
     replyTo: params.email,
     subject: `Nachricht von ${params.name}`,
     text: params.nachricht,

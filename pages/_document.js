@@ -105,12 +105,12 @@ export default class MyDocument extends Document {
                   "postalCode": "50672",
                 "streetAddress": "Hohenzollernring 56"
               },
-                "email": "mailto:info@makeoverbymey.com",
+                "email": "mailto:info@herbie",
               "image": "Makeover_by_Mey_Studio_Koeln_Inhaberin_Mey.jpg",
                 "jobTitle": "Kosmetikerin",
               "name": "Maie Vallerie Böttner",
                 "telephone": "0176 24863717",
-              "url": "https://www.makeoverbymey.com"
+              "url": "https://www.herbie"
             }`,
           }}
         />

@@ -1,8 +1,8 @@
 module.exports = {
   apps: [
     {
-      name: 'makeoverbymey-ssr',
-      cwd: '/home/ubuntu/mey-ssr',
+      name: 'herbie-ssr',
+      cwd: '/home/ubuntu/herbie-ssr',
       script: 'npm',
       args: 'start',
     },

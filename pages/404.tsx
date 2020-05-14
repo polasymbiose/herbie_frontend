@@ -1,6 +1,5 @@
 // import Link from 'next/link';
 import React from 'react'
-import { LogoRotateclean } from '../src/components/Logo/Logo'
 import MainTeaser from '../src/components/MainTeaser/MainTeaser'
 import { fetchWrapper, host } from '../src/helper/fetch'
 import { rx_SsrData } from './index'

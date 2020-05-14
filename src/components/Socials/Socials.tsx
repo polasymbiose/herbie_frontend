@@ -9,14 +9,14 @@ const Socials = () => {
 
         <div className={s.wrapper}>
           <a
-            href='https://www.instagram.com/makeoverbymey/'
+            href='https://www.instagram.com/herbie/'
             target='_blank'
             rel='noreferrer'
           >
             <InstagramIcon style={{ fontSize: 24, color: '#AA9FC1' }} />
           </a>
           <a
-            href='https://www.facebook.com/Makeover-by-Mey-108240967449246/'
+            href='https://www.facebook.com/herbie-108240967449246/'
             target='_blank'
             rel='noreferrer'
           >
