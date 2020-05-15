@@ -21,7 +21,7 @@ app.prepare()
 
   server.listen(41160, (err) => {
     if (err) throw err
-    console.log('> Ready on http://localhost:41160')
+    console.log('> Ready on 0.0.0.0:41160')
   })
 })
 .catch((ex) => {
