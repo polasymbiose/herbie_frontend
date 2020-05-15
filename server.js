@@ -19,9 +19,9 @@ app.prepare()
     return handle(req, res)
   })
 
-  server.listen(3000, '0.0.0.0', (err) => {
+  server.listen(41160, '0.0.0.0', (err) => {
     if (err) throw err
-    console.log('> Ready on http://localhost:3000')
+    console.log('> Ready on http://localhost:41160')
   })
 })
 .catch((ex) => {
