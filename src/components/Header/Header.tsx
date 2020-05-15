@@ -27,7 +27,7 @@ const Header = ({
       {/* <div onClick={handleClick} style={{ display: 'block' }}>
         <Burger isOpen={isOpen} position={-position} hide={hide}/>
       </div> */}
-      <img src={'/images/herbie-schriftzug.jpg'} alt={'Herbie unverpackt Logo' } className={s.herbie}/>
+      {/* <img src={'/images/herbie-schriftzug.jpg'} alt={'Herbie unverpackt Logo' } className={s.herbie}/> */}
     </header>
   )
 }

@@ -5,9 +5,10 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
   const {
     query: { url }
   } = parse(req.url || "", true);
+  
   const r = await fetch(
     // we get images from notion, but you could get them from AWS etc.
-    `0.0.0.0:1337${url as string}`,
+    `http://localhost:1337${url as string}`,
     {
       headers: {
         "content-type": "image/jpeg",

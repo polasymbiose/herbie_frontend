@@ -30,7 +30,8 @@ const Logos = ({
       <div className={s.LogoWrapper} style={{ clipPath: leave }}>
         <Link href={'/'} as={'/'} shallow={true}>
           <a>
-            <img src={'/images/herbie_logo_stretch.png'} alt={'Herbie unverpackt Logo' }/>
+            <img src={'/images/herbie_logo_stretch.png'} alt={'Herbie unverpackt Logo' } className={s.flower}/>
+            <img src={'/images/herbie-schriftzug.jpg'} alt={'Herbie unverpackt Logo' } className={s.herbie}/>
           </a>
         </Link>
       </div>
