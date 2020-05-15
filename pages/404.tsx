@@ -29,12 +29,10 @@ export async function getStaticProps() {
   const url = `${host()}`
   const res = await fetchWrapper(`${url}/sites/`)
   const sites = await res.json()
-  const res2 = await fetchWrapper(`${url}/main-categories/`)
-  const mainCategories = await res2.json()
+
 
   rx_SsrData.next({
-    sites,
-    mainCategories,
+    sites
   })
 
   return {
