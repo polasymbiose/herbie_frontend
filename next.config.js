@@ -7,6 +7,15 @@ module.exports = withPlugins(
     [
       sass,
       {
+        exportPathMap: async function(
+          defaultPathMap,
+          { dev, dir, outDir: __dirname__, distDir, buildId }
+        ) {
+          return {
+            '/': { page: '/' },
+            '/impressum': { page: '/impressum', query: { title: 'Herbie-unverpackt Impressum' } },
+          }
+        },
         cssModules: true,
         cssLoaderOptions: {
           importLoaders: 1,
