@@ -2,8 +2,12 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import React from 'react'
 import s from './Socials.module.scss'
+import { useTheme, useMediaQuery } from '@material-ui/core'
 
 const Socials = () => {
+  const theme = useTheme()
+  const desktop = useMediaQuery(theme.breakpoints.up('sm'))
+
   return (
     <div className={s.Socials}>
 
@@ -13,14 +17,14 @@ const Socials = () => {
             target='_blank'
             rel='noreferrer'
           >
-            <InstagramIcon style={{ fontSize: 24, color: '#AA9FC1' }} />
+            <InstagramIcon style={{ fontSize: desktop ? 34 : 24, color: '#AA9FC1' }} />
           </a>
           <a
             href='https://www.facebook.com/herbie-108240967449246/'
             target='_blank'
             rel='noreferrer'
           >
-            <FacebookIcon style={{ fontSize: 24, color: '#AA9FC1' }} />
+            <FacebookIcon style={{ fontSize: desktop ? 34 : 24, color: '#AA9FC1' }} />
           </a>
         </div>
     </div>

@@ -47,10 +47,10 @@ const Footer = (props: any) => {
           <div className={s.footerend}>
             <div className={s.social}>
               <a href="https://www.instagram.com/herbie unverpackt/" target="_blank" rel="noreferrer">
-                <InstagramIcon style={{fontSize: 20}}/>
+                <InstagramIcon style={{fontSize: 34}}/>
               </a>
               <a href="https://www.facebook.com/herbie unverpackt/" target="_blank" rel="noreferrer">
-                <FacebookIcon style={{fontSize: 20}}/>
+                <FacebookIcon style={{fontSize: 34}}/>
               </a>
             </div>
             <div className={s.right}>
