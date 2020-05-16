@@ -100,15 +100,15 @@ export default class MyDocument extends Document {
                 "@type": "Person",
                 "address": {
                   "@type": "PostalAddress",
-                  "addressLocality": "Köln",
-                  "addressRegion": "NRW",
-                  "postalCode": "50672",
-                "streetAddress": "Hohenzollernring 56"
+                  "addressLocality": "Berlin",
+                  "addressRegion": "Berlin",
+                  "postalCode": "10343",
+                "streetAddress": "str"
               },
-                "email": "mailto:info@herbie",
-              "image": "Makeover_by_Mey_Studio_Koeln_Inhaberin_Mey.jpg",
-                "jobTitle": "Kosmetikerin",
-              "name": "Maie Vallerie Böttner",
+                "email": "mailto:info@herbie-unverpackt.de",
+              "image": "someNice.jpg",
+                "jobTitle": "Foo",
+              "name": "Camela",
                 "telephone": "0176 24863717",
               "url": "https://www.herbie"
             }`,
