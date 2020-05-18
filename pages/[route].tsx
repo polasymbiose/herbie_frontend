@@ -11,10 +11,6 @@ function Route(props: any) {
 }
 
 export async function getStaticPaths() {
-  // const url = `${host()}`
-  // const res = await fetchWrapper(`${url}/sites/`)
-  // const sites = await res.json()
-  // console.log('sites', sites)
   return {
     paths: [
       '/impressum'

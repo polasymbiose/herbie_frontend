@@ -8,6 +8,7 @@ export default class MyDocument extends Document {
       <html lang='de'>
         <Head>
           <meta charSet='utf-8' />
+          <meta name="robots" content="noindex" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link
             rel='apple-touch-icon'
@@ -81,7 +82,6 @@ export default class MyDocument extends Document {
           {/* <link rel="preload" href="/fonts/'Baloo 2'-v14-latin-500.woff" as="font"></link>
           <link rel="preload" href="/fonts/'Baloo 2'-v14-latin-regular.woff" as="font"></link> */}
           <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet"></link>
-
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <meta name='msapplication-TileColor' content='#ffffff' />
           <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
