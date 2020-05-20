@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 const devHost = 'http://localhost:1337'
 // const devHost = 'https://cms.herbie.com'
 // const devHost = 'http://localhost:1337'
-const prodHost = '0.0.0.0:1337'
+const prodHost = 'http://localhost:1337'
 
 export const host = () => {
   return process.env.NODE_ENV === 'development' ? devHost : prodHost
