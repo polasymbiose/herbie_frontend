@@ -22,6 +22,11 @@
     filter: blur(4px);
     margin-bottom: $padL;
 
+    @media (min-width: 600px) {
+      margin-bottom: $padXXL;
+      padding-left: $padL;
+    }
+
     &.ismounted {
       transition: all 1000ms ease-out;
       transition-property: opacity, filter; 
@@ -39,6 +44,11 @@
 
   h1 {
     @include mainteaserheadline;
+    line-height: 3.25rem;
+
+    @media (max-width: 599px) {
+      font-size: 3rem;
+    }
   }
 
   h2 {
