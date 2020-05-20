@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 import { parse } from "url";
 import { NextApiRequest, NextApiResponse } from "next";
+const __DEV__ = process.env.NODE_ENV === 'development'
+
 module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
   const {
     query: { url }
