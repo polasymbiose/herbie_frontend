@@ -241,28 +241,6 @@ const Form = ({ data }: { index: number; data: any }) => {
                             />
                           </div>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12}>
-                          <div className={s.toprow}>
-                            <MaterialTextField
-                              disabled={messagesent}
-                              id='standard-tel'
-                              label='Telefonnummer'
-                              value={tel.value}
-                              onChange={tel.handleValue!}
-                              variant='outlined'
-                              helperText={`${
-                                desktop && tel.error
-                                  ? 'Bitte Telefonnummer eingeben'
-                                  : ''
-                              }`}
-                              error={tel.error}
-                              onFocus={() => {
-                                tel.handleError(false)
-                              }}
-                              className={classes.full}
-                            />
-                          </div>
-                        </Grid>
                       </Grid>
                     </div>
                     <div

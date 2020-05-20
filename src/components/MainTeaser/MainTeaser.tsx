@@ -19,7 +19,8 @@ const MainTeaser = ({
   subHeadline = '',
   multiplier = 1,
   children,
-  link
+  link,
+  alt = 'herbie unverpackt berlin'
 }: {
   imgSrc?: string
   alt?: string
@@ -123,7 +124,7 @@ const MainTeaser = ({
 
   return (
     <div className={s.MainTeaser} style={{ height: finalHeight, width }}>
-      <div className={css} style={{ height: finalHeight, width, backgroundImage: `url('/api/images?url=${imgSrc}')` }}>
+      <div className={css} style={{ height: finalHeight, width, backgroundImage: `url('/images/${imgSrc}')` }}>
         {children}
       </div>
 
@@ -141,7 +142,7 @@ const MainTeaser = ({
       <animated.div style={{ opacity }} className={s.arrow}>
         {arrowIsVisible && desktop && <AnimatedArrow />}
       </animated.div>
-      <img style={{ display: 'none' }} src={`/api/images?url=${imgSrc}`} onLoad={handleOnLoad} onError={handleOnError} alt={headline}/>
+      <img style={{ display: 'none' }} src={`/images/${imgSrc}`} onLoad={handleOnLoad} onError={handleOnError} alt={alt}/>
     </div>
   )
 }

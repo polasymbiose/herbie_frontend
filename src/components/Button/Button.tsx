@@ -44,7 +44,7 @@ const Button = ({
         {handler ? (
           <a onClick={customHandler}  style={{ ...style, border: '0px solid black' }}>{label}</a>
         ) : (
-          <Link href={'/[route]'} as={link} shallow={true}>
+          <Link href={link} as={link} shallow={true}>
             <a>
           {/* <Link href={link} style={{ ...style, border: '0px solid black' }}> */}
             {label}

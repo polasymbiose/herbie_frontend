@@ -97,20 +97,20 @@ export default class MyDocument extends Document {
           dangerouslySetInnerHTML={{
             __html: `{
               "@context": "http://schema.org",
-                "@type": "Person",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Berlin",
-                  "addressRegion": "Berlin",
-                  "postalCode": "10343",
-                "streetAddress": "str"
+              "@type": "Person",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Berlin",
+                "addressRegion": "Berlin",
+                "postalCode": "12045",
+                "streetAddress": "Elbestrasse 21"
               },
-                "email": "mailto:info@herbie-unverpackt.de",
+              "email": "mailto:info@herbie-unverpackt.de",
               "image": "someNice.jpg",
-                "jobTitle": "Foo",
+              "jobTitle": "Foo",
               "name": "Camela",
-                "telephone": "0176 24863717",
-              "url": "https://www.herbie"
+              "telephone": "0176 24863717",
+              "url": "https://www.herbie-unverpackt.de"
             }`,
           }}
         />

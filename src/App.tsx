@@ -30,6 +30,7 @@ function App(props: any) {
     () => alldata?.map((route: any) => route.navigationConfig),
     [alldata]
   )
+
   const css = cn({
     route: true,
     blur: isOpen || galleryIndex !== -1
@@ -61,7 +62,7 @@ function App(props: any) {
         {/* <Menu isOpen={isOpen} setIsOpen={setIsOpen} nav={nav} /> */}
         <Header isOpen={isOpen || galleryIndex !== -1} setIsOpen={setIsOpen} hide={galleryIndex !== -1}/>
         <div className={css}>
-          <Home alldata={alldata} priceCat={props.mainCategories}/>
+          <Home alldata={alldata} {...props}/>
           <Footer nav={nav} />
         </div>
       </div>

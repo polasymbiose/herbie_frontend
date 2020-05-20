@@ -8,18 +8,20 @@ const BoxTeaser = ({
   imgSrc,
   headline,
   link,
-  text
+  text,
+  alt = 'herbie unverpackt berlin'
 }: {
   imgSrc: string
   headline?: string
   link?: any
   index: number
   text: string
+  alt?: string
 }) => {
 
   const converter = new showdown.Converter()
   const parsedHtml = converter.makeHtml(text)
-
+console.log('alt', alt)
   return (
     <div className={s.BoxTeaser}>
       <Grid container justify="center" alignItems="stretch" alignContent="center" spacing={0}>
@@ -27,8 +29,8 @@ const BoxTeaser = ({
           <div className={s.wrapper}>
             <Grid container justify="center" alignItems="stretch" alignContent="center" spacing={0}>
               <Grid item xs={12} sm={6}>
-                <img src={`/api/images?url=${imgSrc}`} alt="herbie unverpackt"/>
-                <div className={s.background} style={{ backgroundImage: `url('/api/images?url=${imgSrc}')` }}></div>
+                <img src={`/images/${imgSrc}`} alt={alt}/>
+                <div className={s.background} style={{ backgroundImage: `url('/images/${imgSrc}')` }}></div>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <div className={s.innerBox}>

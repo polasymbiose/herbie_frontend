@@ -17,7 +17,7 @@ export async function getStaticProps() {
   const sites = await res.json()
   
   const currentRoute = sites.find((site) => {
-    return site.navigationConfig.path === '/'
+    return site.navigationConfig.path === '/impressum'
   })
 
   const TeaserImages = currentRoute?.TeaserList.find((t) => t.TeaserImage)

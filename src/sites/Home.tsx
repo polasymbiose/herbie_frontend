@@ -22,7 +22,7 @@ const GalleryList = dynamic(import('../components/GalleryList/GalleryList'), {
 })
 const Slider = dynamic(import('../components/Slider/Slider'), { ssr: false })
 
-const Home = ({ alldata }: { alldata: any[]; priceCat: any }) => {
+const Home = ({ alldata, mainteaser, boxteaser }: { alldata: any[]; priceCat: any, mainteaser: any, boxteaser: any }) => {
   const router = useRouter()
   const galleryIndex = useObservable(rx_isGalleryOpen)
   useBodyClass('noscroll', galleryIndex !== -1)
@@ -42,15 +42,18 @@ const Home = ({ alldata }: { alldata: any[]; priceCat: any }) => {
   )
   const teaserList = data?.TeaserList || []
 
+      console.log('boxteaser', boxteaser)
   return (
     <div>
       {teaserList?.map((teaser: any, index: number) => {
         if (teaser.__component === 'base-components.main-teaser') {
+          console.log('mainteaser', mainteaser)
           return (
             <div key={`teaserlist-${teaser.__component}${teaser.id}`}>
               <MainTeaser
+                alt={teaser?.TeaserImage?.alt}
                 index={index}
-                imgSrc={`${teaser?.TeaserImage?.url}`}
+                imgSrc={`${teaser?.TeaserImage?.name}`}
                 // imgSrc={`${host()}/${teaser?.TeaserImage?.url}`}
                 headline={teaser?.MainHeadline}
                 subHeadline={teaser?.SubHeadline}
@@ -99,13 +102,15 @@ const Home = ({ alldata }: { alldata: any[]; priceCat: any }) => {
           if (isHidden) {
             return null
           }
+            console.log('boxteaser', boxteaser, teaser)
           return (
             <BoxTeaser
               key={`teaserlist-${teaser.__component}${teaser.id}`}
               index={index}
+              alt={boxteaser?.image?.alt}
               headline={teaser.headline}
               link={teaser.Link}
-              imgSrc={`${teaser.image?.url}`}
+              imgSrc={`${teaser.image.name}`}
               text={teaser.text}
             />
           )
