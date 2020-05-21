@@ -42,7 +42,6 @@ const Home = ({ alldata, mainteaser, boxteaser }: { alldata: any[]; priceCat: an
   )
   const teaserList = data?.TeaserList || []
 
-      console.log('boxteaser', boxteaser)
   return (
     <div>
       {teaserList?.map((teaser: any, index: number) => {
@@ -102,7 +101,6 @@ const Home = ({ alldata, mainteaser, boxteaser }: { alldata: any[]; priceCat: an
           if (isHidden) {
             return null
           }
-            console.log('boxteaser', boxteaser, teaser)
           return (
             <BoxTeaser
               key={`teaserlist-${teaser.__component}${teaser.id}`}
