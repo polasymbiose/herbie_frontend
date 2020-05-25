@@ -22,7 +22,7 @@ const GalleryList = dynamic(import('../components/GalleryList/GalleryList'), {
 })
 const Slider = dynamic(import('../components/Slider/Slider'), { ssr: false })
 
-const Home = ({ alldata, mainteaser, boxteaser }: { alldata: any[]; priceCat: any, mainteaser: any, boxteaser: any }) => {
+const Home = ({ alldata, boxteaser }: { alldata: any[]; priceCat: any, mainteaser: any, boxteaser: any }) => {
   const router = useRouter()
   const galleryIndex = useObservable(rx_isGalleryOpen)
   useBodyClass('noscroll', galleryIndex !== -1)
