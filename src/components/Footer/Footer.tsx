@@ -57,7 +57,6 @@ const Footer = (props: any) => {
               {props.nav
                 ?.filter((item: any) => item.infooter === true)
                 .map((item: any) => {
-                  console.log('item', item)
                   return (
                     <div key={`footer-${item.path}`}>
                       <Link

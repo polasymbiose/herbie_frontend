@@ -29,8 +29,8 @@ console.log('alt', alt)
           <div className={s.wrapper}>
             <Grid container justify="center" alignItems="stretch" alignContent="center" spacing={0}>
               <Grid item xs={12} sm={6}>
-                <img src={`/images/${imgSrc}`} alt={alt}/>
-                <div className={s.background} style={{ backgroundImage: `url('/images/${imgSrc}')` }}></div>
+                <img src={`/api/images?url=${imgSrc}`} alt={alt}/>
+                <div className={s.background} style={{ backgroundImage: `url('/api/images?url=${imgSrc}')` }}></div>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <div className={s.innerBox}>

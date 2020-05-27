@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 import { useObservable } from '../hooks/useObservable'
 import { rx_IsFooterHidden } from '../components/MainTeaser/MainTeaser'
+import { host } from '../helper/fetch'
 
 const Form = dynamic(import('../components/Form/Form'))
 const MainTeaser = dynamic(import('../components/MainTeaser/MainTeaser'), {
@@ -22,7 +23,7 @@ const GalleryList = dynamic(import('../components/GalleryList/GalleryList'), {
 })
 const Slider = dynamic(import('../components/Slider/Slider'), { ssr: false })
 
-const Home = ({ alldata, boxteaser }: { alldata: any[]; priceCat: any, mainteaser: any, boxteaser: any }) => {
+const Home = ({ alldata }: { alldata: any[]; priceCat: any, mainteaser: any, boxteaser: any }) => {
   const router = useRouter()
   const galleryIndex = useObservable(rx_isGalleryOpen)
   useBodyClass('noscroll', galleryIndex !== -1)
@@ -46,13 +47,14 @@ const Home = ({ alldata, boxteaser }: { alldata: any[]; priceCat: any, maintease
     <div>
       {teaserList?.map((teaser: any, index: number) => {
         if (teaser.__component === 'base-components.main-teaser') {
+          console.log('main', teaser)
           return (
             <div key={`teaserlist-${teaser.__component}${teaser.id}`}>
               <MainTeaser
                 alt={teaser?.TeaserImage?.alt}
                 index={index}
-                imgSrc={`${teaser?.TeaserImage?.name}`}
-                // imgSrc={`${host()}/${teaser?.TeaserImage?.url}`}
+                // imgSrc={`${teaser?.TeaserImage?.url}`}
+                imgSrc={`${teaser?.TeaserImage?.url}`}
                 headline={teaser?.MainHeadline}
                 subHeadline={teaser?.SubHeadline}
                 multiplier={teaser?.multiplier}
@@ -100,14 +102,14 @@ const Home = ({ alldata, boxteaser }: { alldata: any[]; priceCat: any, maintease
           if (isHidden) {
             return null
           }
+          console.log('box', teaser.image)
           return (
             <BoxTeaser
               key={`teaserlist-${teaser.__component}${teaser.id}`}
               index={index}
-              alt={boxteaser?.image?.alt}
               headline={teaser.headline}
               link={teaser.Link}
-              imgSrc={`${teaser.image.name}`}
+              imgSrc={`${teaser.image.url}`}
               text={teaser.text}
             />
           )

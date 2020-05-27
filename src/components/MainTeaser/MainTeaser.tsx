@@ -124,7 +124,7 @@ const MainTeaser = ({
 
   return (
     <div className={s.MainTeaser} style={{ height: finalHeight, width }}>
-      <div className={css} style={{ height: finalHeight, width, backgroundImage: `url('/images/${imgSrc}')` }}>
+      <div className={css} style={{ height: finalHeight, width, backgroundImage: `url('/api/images?url=${imgSrc}')` }}>
         {children}
       </div>
 
@@ -142,7 +142,7 @@ const MainTeaser = ({
       <animated.div style={{ opacity }} className={s.arrow}>
         {arrowIsVisible && desktop && <AnimatedArrow />}
       </animated.div>
-      <img style={{ display: 'none' }} src={`/images/${imgSrc}`} onLoad={handleOnLoad} onError={handleOnError} alt={alt}/>
+      <img style={{ display: 'none' }} src={`/api/images?url=${imgSrc}`} onLoad={handleOnLoad} onError={handleOnError} alt={alt}/>
     </div>
   )
 }

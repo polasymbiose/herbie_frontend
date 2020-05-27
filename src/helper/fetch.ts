@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-const devHost = 'http://localhost:1337'
+const devHost = 'https://cms.herbie-unverpackt.de'
 // const devHost = 'https://cms.herbie.com'
 // const devHost = 'http://localhost:1337'
 const prodHost = 'https://cms.herbie-unverpackt.de'
