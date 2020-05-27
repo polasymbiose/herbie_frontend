@@ -7,7 +7,7 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const raw = JSON.stringify({
     ...req.body,
-    to: 'info@herbie-unverpackt.com'
+    to: 'info@herbie-unverpackt.de'
   })
 
   const options = {
