@@ -8,7 +8,7 @@
     "dev": "node server.js",
     "build": "next build",
     "export": "next export",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production node prod.js",
     "serve": "npm start && npm start --prefix /var/www/virtual/herbie23/html/herbie_strapi"
   },
   "keywords": [],
