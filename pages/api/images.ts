@@ -17,7 +17,6 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
       }
     }
   );
-  console.log('-------', res)
   res.setHeader("content-type", r.headers.get("content-type"));
   res.setHeader("cache-control", "s-maxage=1, stale-while-revalidate");
   r.body.pipe(res);

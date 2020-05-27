@@ -12,7 +12,7 @@ export async function getStaticProps() {
   const url = `${host()}`
   const res = await fetchWrapper(`${url}/sites/`)
   const sites = await res.json()
-  
+
   return {
     props: {
       sites

@@ -21,7 +21,7 @@ const BoxTeaser = ({
 
   const converter = new showdown.Converter()
   const parsedHtml = converter.makeHtml(text)
-console.log('alt', alt)
+
   return (
     <div className={s.BoxTeaser}>
       <Grid container justify="center" alignItems="stretch" alignContent="center" spacing={0}>

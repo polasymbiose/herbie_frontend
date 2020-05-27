@@ -8,11 +8,10 @@ module.exports = {
 	"NODE_ENV": "development"
     }
   }, {
-    "name": "prod_eco",
-    script: 'server.js',
+    "name": "prod",
+    script: 'prod.js',
     watch: '.',
     env: {
-	"PORT": 3022,
         "NODE_ENV": "production"
     }
   }]

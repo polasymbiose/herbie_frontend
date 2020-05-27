@@ -72,49 +72,7 @@ const Footer = (props: any) => {
             </div>
           </div>
             </Grid>
-            {/* <Grid item xs={12} sm={10} md={4}>
-              <h5>Öffnungszeiten</h5>
-              <ul>
-                <li>Mo – Sa: 10:00 – 19:00 Uhr</li>
-              </ul>
-            </Grid> */}
           </Grid>
-          {/* <div className={s.footerend}>
-            <div className={s.social}>
-              <a
-                href='https://www.instagram.com/herbie unverpackt/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <InstagramIcon style={{ fontSize: 26 }} />
-              </a>
-              <a
-                href='https://www.facebook.com/herbie unverpackt/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <FacebookIcon style={{ fontSize: 26 }} />
-              </a>
-            </div>
-            <div className={s.right}>
-              {props.nav
-                ?.filter((item: any) => item.infooter === true)
-                .map((item: any) => {
-                  console.log('item', item)
-                  return (
-                    <div key={`footer-${item.path}`}>
-                      <Link
-                        href={`${item.path}`}
-                        as={`${item.path}`}
-                        shallow={true}
-                      >
-                        <a>{item.label}</a>
-                      </Link>
-                    </div>
-                  )
-                })}
-            </div>
-          </div> */}
         </Grid>
       </Grid>
     </div>

@@ -47,7 +47,7 @@ const Home = ({ alldata }: { alldata: any[]; priceCat: any, mainteaser: any, box
     <div>
       {teaserList?.map((teaser: any, index: number) => {
         if (teaser.__component === 'base-components.main-teaser') {
-          console.log('main', teaser)
+          // console.log('main', teaser)
           return (
             <div key={`teaserlist-${teaser.__component}${teaser.id}`}>
               <MainTeaser
@@ -102,7 +102,7 @@ const Home = ({ alldata }: { alldata: any[]; priceCat: any, mainteaser: any, box
           if (isHidden) {
             return null
           }
-          console.log('box', teaser.image)
+          // console.log('box', teaser.image)
           return (
             <BoxTeaser
               key={`teaserlist-${teaser.__component}${teaser.id}`}

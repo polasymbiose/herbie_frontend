@@ -2,10 +2,9 @@ const express = require('express')
 const React = require('react')
 const next = require('next')
 
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const app = next({ dev: false })
 const handle = app.getRequestHandler()
-const port = 3022
+
 app.prepare()
 .then(() => {
   const server = express()
@@ -19,13 +18,12 @@ app.prepare()
   //   return handle(req, res)
   // })
 
-  server.listen(port, (err) => {
+  server.listen(41161, (err) => {
     if (err) throw err
-    console.log('> Ready on 0.0.0.0:' + port)
+    console.log('> Ready on http://localhost:41161')
   })
 })
 .catch((ex) => {
   console.error(ex.stack)
   process.exit(1)
 })
-
