@@ -4,6 +4,7 @@ const next = require('next')
 
 const app = next({ dev: false })
 const handle = app.getRequestHandler()
+process.env.NODE_ENV = 'production'
 
 app.prepare()
 .then(() => {
