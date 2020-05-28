@@ -4,7 +4,7 @@ const __DEV__ = process.env.NODE_ENV === 'development'
 
 export const initAnalytics = () => {
   const mbm = JSON.parse(getCookie('mbm'))
-  // !__DEV__ && (mbm.analytics === true || mbm.isSet === false) && ReactGA.initialize('UA-160317912-1', { debug: false })
+  !__DEV__ && (mbm.analytics === true || mbm.isSet === false) && ReactGA.initialize('UA-167933629-1', { debug: false })
   !__DEV__ && (mbm.analytics === true || mbm.isSet === false) && ReactGA.set({ anonymizeIp: true })
 }
 
