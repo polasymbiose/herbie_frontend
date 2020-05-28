@@ -58,12 +58,11 @@ export const formCreator = (params: {[key: string]: string}): Formular => {
     text: params.nachricht,
     html: `
     <div>
-      <h1>Kontaktformular Makeover by Mey</h1>
+      <h1>Kontaktformular Herbie Unverpackt</h1>
       <div>
         <div>
           <p><bold>Name: ${params.name}</bold></p>
           <p>Email: ${params.email}</p>
-          <p>Telefon: ${params.tel}</p>
         </div>
         <div>
           <p>${params.nachricht}</p>

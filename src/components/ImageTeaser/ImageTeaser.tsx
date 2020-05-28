@@ -10,7 +10,7 @@ const ImageTeaser = ({ src = '', alt = '', index }: { src: string; alt: string; 
     <div className={s.ImageTeaser} ref={ref}>
       <Grid container justify="center" alignItems="stretch" alignContent="center" spacing={0}>
         <Grid item xs={10} sm={8} md={6}>
-          <img src={`/api/images?url=${src}`} alt={alt || 'Makeover by Mey Beauty Studio'} />
+          <img src={`/api/images?url=${src}`} alt={alt || 'Herbie Unverpackt'} />
         </Grid>
       </Grid>
     </div>
