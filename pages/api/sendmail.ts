@@ -21,6 +21,7 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     const response = await fetch(`${host()}/sendmail`, options)
+    console.log('response', response)
     res.status(200).json({foo: 'bar'})
     if (!response.ok) throw new Error('error postRequest')
     return

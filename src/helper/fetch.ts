@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-const devHost = 'https://cms.herbie-unverpackt.de'
+const devHost = 'http://localhost:1337'
 // const devHost = 'https://cms.herbie.com'
 // const devHost = 'http://localhost:1337'
 const prodHost = 'https://cms.herbie-unverpackt.de'
@@ -21,7 +21,6 @@ export const fetchWrapper = async (url: string): Promise<Response> => {
 
 export interface Formular {
   to: string
-  replyTo: string
   subject: string
   text: string
   html: string
@@ -54,8 +53,7 @@ export const postReqeuest = async (data: Formular): Promise<void> => {
 export const formCreator = (params: {[key: string]: string}): Formular => {
 
   return ({
-    to: 'info@herbie.com',
-    replyTo: params.email,
+    to: 'info@herbie-unverpackt.de',
     subject: `Nachricht von ${params.name}`,
     text: params.nachricht,
     html: `
