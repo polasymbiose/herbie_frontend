@@ -284,7 +284,7 @@ const Form = ({ data }: { index: number; data: any }) => {
                           style={{ padding: '0 8px 0 0' }}
                         />
                         {'Ich akzeptiere die '}
-                        <Link href={'/[route]'} as={`${'/datenschutz'}`} shallow={true}>
+                        <Link href={'/datenschutz'} as={`${'/datenschutz'}`} >
                           <a>{'Datenschutz-Bedingungen'}</a>
                         </Link>
                       </p>

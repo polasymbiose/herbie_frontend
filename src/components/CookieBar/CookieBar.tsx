@@ -67,9 +67,9 @@ const CookieBar = () => {
                 {
                   'Meine Website verwendet Cookies. Durch die Nutzung dieser Website stimmst du dem Einsatz von Cookies zu. Du kannst deine Entscheidung jederzeit auf der '
                 }
-                <Link href={'/datenschutz'} as={'/datenschutz'} shallow={true}>
+                <Link href={'/datenschutz'} as={'/datenschutz'}>
                   {/* <Link href={'/datenschutz'} style={{ color: '#212121' }}> */}
-                  <a onClick={e => e.preventDefault()}>Datenschutz-Seite</a>
+                  <a>Datenschutz-Seite</a>
                 </Link>
                 {' ändern.'}
               </p>
