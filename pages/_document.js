@@ -86,7 +86,7 @@ export default class MyDocument extends Document {
           <meta name='msapplication-TileColor' content='#ffffff' />
           <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
           <meta name='theme-color' content='#ffffff' />
-          <meta name="google-site-verification" content="mMabHhOsXHpUeNXjGaG7R5cF5m-p5eC6-CvJeluUEiw" />
+          <meta name="google-site-verification" content="dSuxesBHDm2b-bGEwd8OYsTdvu6iBHSprw5d7Ncw6Hc" />
         </Head>
         <body>
           <Main />
