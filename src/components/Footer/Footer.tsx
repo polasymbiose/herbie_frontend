@@ -22,9 +22,9 @@ const Footer = (props: any) => {
             <Grid item xs={12} sm={10} md={6}>
               <h5>Adresse</h5>
               <ul>
-                <li>{'Herbie Unverpackt UG & Co. KG'}</li>
-                <li>Elbestrasse 21</li>
-                <li>12045 Berlin</li>
+                <li>Herbie Unverpackt UG</li>
+                <li>Elbestraße 19</li>
+                <li>12049 Berlin</li>
               </ul>
             </Grid>
             <Grid item xs={12} sm={10} md={6}>
