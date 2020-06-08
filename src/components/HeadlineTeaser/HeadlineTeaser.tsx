@@ -40,7 +40,7 @@ const HeadlineTeaser = ({
   const show = () => {
     setCookie('mbm', { ...cookies.mbm, isSet: false }, { path: '/' })
   }
-console.log('headline', headline)
+
   return (
     <div className={css}>
       <Grid container justify='center' spacing={0}>
