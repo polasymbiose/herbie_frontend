@@ -40,13 +40,13 @@ const HeadlineTeaser = ({
   const show = () => {
     setCookie('mbm', { ...cookies.mbm, isSet: false }, { path: '/' })
   }
-
+console.log('headline', headline)
   return (
     <div className={css}>
       <Grid container justify='center' spacing={0}>
         <Grid item xs={10} sm={8} md={6}>
           <div>
-            <div dangerouslySetInnerHTML={{ __html: `<h2>${headline}</h2>` }} />
+            {headline !== 'null' && <div dangerouslySetInnerHTML={{ __html: `<h2>${headline}</h2>` }} />}
             {router.asPath === '/datenschutz' && (
               <div style={{ marginBottom: 32 }}>
                 <Button
