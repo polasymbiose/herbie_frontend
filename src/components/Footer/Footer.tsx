@@ -22,7 +22,7 @@ const Footer = (props: any) => {
             <Grid item xs={12} sm={10} md={6}>
               <h5>Adresse</h5>
               <ul>
-                <li>Herbie Unverpackt UG</li>
+                <li>Herbie Unverpackt GmbH</li>
                 <li>Elbestraße 19</li>
                 <li>12049 Berlin</li>
               </ul>
@@ -31,8 +31,8 @@ const Footer = (props: any) => {
             <h5>E-Mail</h5>
               <ul>
                 <li>
-                  <a href='mailto:info@herbie-unverpackt.com'>
-                    info@herbie-unverpackt.com
+                  <a href='mailto:info@herbie-unverpackt.de'>
+                    info@herbie-unverpackt.de
                   </a>
                 </li>
               </ul>
