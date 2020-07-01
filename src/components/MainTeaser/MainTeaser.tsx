@@ -130,6 +130,7 @@ const MainTeaser = ({
 
       <div className={mountCss}>
         <animated.div style={{ opacity, paddingTop }}>
+        <a className={s.startnext} href="https://www.startnext.com/herbie-unverpackt?utm_source=startnext&utm_medium=extwidget&utm_campaign=projectbutton&utm_term=projectpromo" title="Herbie Unverpackt, dein neuer Unverpackt-Laden in Berlin, unterstützen auf Startnext!" target="_blank"><img src="https://www.startnext.com/templates/platforms/startnext/themes/project/img/project_widget_btn_DE.png" alt="Unterstützen" /></a>
           <div dangerouslySetInnerHTML={{ __html: `<h1>${headline}</h1>` }} />
         </animated.div>
         <animated.div style={{ opacity }}>
