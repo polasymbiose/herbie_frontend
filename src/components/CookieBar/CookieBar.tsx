@@ -16,12 +16,13 @@ import Link from 'next/link'
 const cx = cn.bind(s)
 
 const CookieBar = () => {
-  const [settings, setsettings] = useState(false)
+  const [settings, setsettings] = useState(true)
   const [cookies, setCookie] = useCookies(['mbm'])
   const theme = useTheme()
   const desktop = useMediaQuery(theme.breakpoints.up('sm'))
 
   useEffect(() => {
+    console.log('cookies.mbm', cookies.mbm)
     cookies.mbm === undefined &&
       setCookie('mbm', {
         analytics: false,
@@ -83,14 +84,14 @@ const CookieBar = () => {
                           size='small'
                           checked={
                             cookies.mbm?.analytics === undefined
-                              ? true
+                              ? false
                               : cookies.mbm?.analytics
                           }
                           onChange={toggleanalytics}
                         />
                       </div>
                     }
-                    label='Tracking'
+                    label='Google Analytics'
                   />
                 </Collapse>
               </div>
@@ -104,16 +105,6 @@ const CookieBar = () => {
               {/* <h4 onClick={() => setsettings(state => !state)}>
                 Cookie-Einstellungen
               </h4> */}
-              <div>
-                <Button
-                  containerStyle={{ marginTop: 0 }}
-                  style={{ padding: '4px 8px' }}
-                  label='Einstellungen'
-                  black
-                  handler={() => setsettings(state => !state)}
-                />
-              </div>
-              {true && (
                 <Collapse in={settings}>
                   <div>
                     <Button
@@ -126,13 +117,12 @@ const CookieBar = () => {
                     />
                   </div>
                 </Collapse>
-              )}
               <div>
                 <Button
                   round
                   containerStyle={{ marginTop: 0 }}
                   style={{ padding: '4px 8px', color: '#212121' }}
-                  label='Akzeptieren'
+                  label='Cookie akzeptieren'
                   handler={accept}
                 />
               </div>
