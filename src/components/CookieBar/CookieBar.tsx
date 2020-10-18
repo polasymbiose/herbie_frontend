@@ -22,7 +22,6 @@ const CookieBar = () => {
   const desktop = useMediaQuery(theme.breakpoints.up('sm'))
 
   useEffect(() => {
-    console.log('cookies.mbm', cookies.mbm)
     cookies.mbm === undefined &&
       setCookie('mbm', {
         analytics: false,

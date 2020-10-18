@@ -24,7 +24,7 @@ const Footer = (props: any) => {
               <ul>
                 <li>Herbie Unverpackt GmbH</li>
                 <li>Elbestraße 19</li>
-                <li>12049 Berlin</li>
+                <li>12045 Berlin</li>
               </ul>
             </Grid>
             <Grid item xs={12} sm={10} md={6}>
