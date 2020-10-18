@@ -31,7 +31,7 @@ const MainTeaser = ({
   link?: React.ReactNode
   index: number
 }) => {
-  const { width = 100, height = 600 } = useWindowSize({init: true})
+  const { width = 100, height = 600 } = useWindowSize({init: false})
 
   const [stateHeight, setstateHeight] = useState(0)
   // const [position, setposition] = useState(0)
@@ -123,8 +123,8 @@ const MainTeaser = ({
   })
 
   return (
-    <div className={s.MainTeaser} style={{ height: finalHeight, width }}>
-      <div className={css} style={{ height: finalHeight, width, backgroundImage: `url('/api/images?url=${imgSrc}')` }}>
+    <div className={s.MainTeaser} style={{ height: finalHeight, width: '100vw' }}>
+      <div className={css} style={{ height: finalHeight, width: '100vw', backgroundImage: `url('/api/images?url=${imgSrc}')` }}>
         {children}
       </div>
 
