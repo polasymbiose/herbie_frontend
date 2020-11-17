@@ -20,15 +20,16 @@ const Footer = (props: any) => {
         <Grid item xs={10} sm={10} md={8} className={s.innerBox}>
           <Grid container spacing={2} justify={'center'}>
             <Grid item xs={12} sm={10} md={6}>
-              <h5>Adresse</h5>
               <ul>
                 <li>Herbie Unverpackt GmbH</li>
+                <li>Mo-Fr 9.30 - 13.30 Uhr / 15.00 - 20.00 Uhr</li>
+                <li>Sa 12.00 - 17.00 Uhr</li>
+                <li>&nbsp;</li>
                 <li>Elbestraße 19</li>
                 <li>12045 Berlin</li>
               </ul>
             </Grid>
             <Grid item xs={12} sm={10} md={6}>
-            <h5>E-Mail</h5>
               <ul>
                 <li>
                   <a href='mailto:info@herbie-unverpackt.de'>
@@ -36,42 +37,42 @@ const Footer = (props: any) => {
                   </a>
                 </li>
               </ul>
-            <div className={s.footerend}>
-            <div className={s.social}>
-              <a
-                href='https://www.instagram.com/herbieunverpackt/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <InstagramIcon style={{ fontSize: 26 }} />
-              </a>
-              <a
-                href='https://www.facebook.com/Herbie-Unverpackt-101424224898669/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <FacebookIcon style={{ fontSize: 26 }} />
-              </a>
+              <div className={s.footerend}>
+              <div className={s.social}>
+                <a
+                  href='https://www.instagram.com/herbieunverpackt/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <InstagramIcon style={{ fontSize: 26 }} />
+                </a>
+                <a
+                  href='https://www.facebook.com/Herbie-Unverpackt-101424224898669/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  <FacebookIcon style={{ fontSize: 26 }} />
+                </a>
+              </div>
+              <div className={s.right}>
+                {props.nav
+                  ?.filter((item: any) => item.infooter === true)
+                  .map((item: any) => {
+                    return (
+                      <div key={`footer-${item.path}`}>
+                        <Link
+                          href={`${item.path}`}
+                          as={`${item.path}`}
+                          shallow={true}
+                        >
+                          <a>{item.label}</a>
+                        </Link>
+                      </div>
+                    )
+                  })}
+              </div>
             </div>
-            <div className={s.right}>
-              {props.nav
-                ?.filter((item: any) => item.infooter === true)
-                .map((item: any) => {
-                  return (
-                    <div key={`footer-${item.path}`}>
-                      <Link
-                        href={`${item.path}`}
-                        as={`${item.path}`}
-                        shallow={true}
-                      >
-                        <a>{item.label}</a>
-                      </Link>
-                    </div>
-                  )
-                })}
-            </div>
-          </div>
-            </Grid>
+          </Grid>
           </Grid>
         </Grid>
       </Grid>
