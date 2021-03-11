@@ -22,8 +22,7 @@ const Footer = (props: any) => {
             <Grid item xs={12} sm={10} md={6}>
               <ul>
                 <li>Herbie Unverpackt GmbH</li>
-                <li>Montag-Freitag 12 - 19 Uhr</li>
-                <li>Samstag 12 - 17 Uhr</li>
+                <li>Mo-Mi &amp; Fr-Sa 12 - 19 Uhr // Di-Do 11 - 20 Uhr</li>
                 <li>&nbsp;</li>
                 <li>Elbestraße 19</li>
                 <li>12045 Berlin</li>
